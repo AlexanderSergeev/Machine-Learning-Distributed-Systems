@@ -7,6 +7,6 @@ Instructions:
 
 docker pull tensorflow/serving
 
-2. Start TensorFlow Serving container and open the REST API port:
+2. Start multiple(5) scaled TensorFlow Serving containers and open the REST API ports:
 
-docker-compose up
+docker-compose up --scale tensorflow-serving=5
