@@ -3,7 +3,7 @@ services:
   tensorflow-serving:
     image: 'tensorflow/serving'
     ports:
-        - '8501:8501'
+        - '8501'
     environment:
         - MODEL_NAME=news
     volumes:
