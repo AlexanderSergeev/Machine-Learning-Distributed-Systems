@@ -1,10 +1,13 @@
-version: '3'
+version: '3.3'
 services:
   tensorflow-serving:
     image: 'tensorflow/serving'
+    deploy:
+        replicas: 5
+        endpoint_mode: dnsrr
     ports:
-        - '8501'
+        - '8501:8501'
     environment:
         - MODEL_NAME=news
     volumes:
-        - ./tmp/news:/models/news
+        - "/d/PythonProjects/Machine-Learning-Distributed-Systems/tmp/news:/models/news"
