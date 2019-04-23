@@ -7,6 +7,12 @@ Instructions:
 
 docker pull tensorflow/serving
 
-2. Start multiple(5) scaled TensorFlow Serving containers and open the REST API ports:
+2. Set your local model path in docker-compose.yml volumes section
 
-docker-compose up --scale tensorflow-serving=5
+3. Deploy on Kubernetes (bind to port 8501)
+
+docker stack deploy --compose-file docker-compose.yml news
+
+4. Use the following command to get the information about running nodes
+
+kubectl get all
