@@ -7,7 +7,7 @@ def predict(l):
     r = l.client.post("/v1/models/news:predict", json=payload)
 
 class UserBehavior(TaskSet):
-    tasks = {predict: 2}
+    tasks = {predict: 5}
 
     def on_start(self):
         print('start')
